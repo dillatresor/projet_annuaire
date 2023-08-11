@@ -1,0 +1,9 @@
+.btn {
+    background-color:rgb(244, 22, 22)
+    
+}
+
+.image-redimensionnee {
+    max-width: 30%;
+    height: auto;
+}
