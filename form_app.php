@@ -39,8 +39,8 @@
     </div>
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-danger me-md-2" type="button">Ajouter</button>
-        <button class="btn btn-danger" type="button">Annuler</button>
+    <a  class="btn btn-danger m-5" href="insert_tuteur">Ajouter</a>
+    <a  class="btn btn-danger m-5" href="insert_tuteur">Annuler</a>
     </div>
 
      </div>

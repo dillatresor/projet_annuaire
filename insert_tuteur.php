@@ -1,6 +1,9 @@
 <?php
+
+
+
 try{
-$db = new PDO('mysql:host=localhost;dbname=annuaire', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=bd_app', 'root', '');
  
 }
 catch(Exception $e)
@@ -16,14 +19,13 @@ catch(Exception $e)
     $telephone = $_POST['telephone'];
     $email = $_POST['email'];
     $fonction = $_POST['fonction'];
-    $sexe = $_POST['sexe'];
-              
+   
              
           
-        $query = $db->prepare( 'INSERT INTO tuteurs (nom,prenom,adresse,telephone,email,fontion,sexe) VALUES (?,?,?,?,?,?,?)');
+        $query = $db->prepare( 'INSERT INTO tuteurs (nom,prenom,adresse,telephone,email,fontion) VALUES (?,?,?,?,?,?)');
 
-        $query->execute(array($nom,$prenom,$adresse,$email,$telephone,$sexe));
+        $query->execute(array($nom,$prenom,$adresse,$telephone,$email,$fonction,));
 
-        header('location:form_tuteur.php')
+        header('location:tuteurs.php')
          
 ?>

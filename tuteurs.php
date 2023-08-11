@@ -21,15 +21,46 @@
   <div class="text-center bg-danger m-5 ">
 
     <table class="table table-bordered">
-      <thead>
-        <th>
-        <td>Nom</td>
-        <td>Prenom</td>
-        <td>Adresse</td>
-        <td>Telephone</td>
-        <td>Email</td>
-        <td>Fonction</td>
-        <td>Sexe</td>
+    <?php
+   $bdd= new PDO('mysql:host=localhost;dbname=bd_app','root','');
+   
+   $reponse = $bdd->query('SELECT * FROM tuteurs');
+
+   echo" <tbody>
+          <tr>
+            <td>nom</td>
+            <td>prenom</td>
+            <td>adresse</td>
+            <td>telephone</td>
+            <td>email</td>
+            <td>fonction</td>
+           
+          </tr>
+        </tbody> 
+        ";
+
+   while($donnes = $reponse->fetch())
+   {
+    echo"
+      <tr>
+      <td>".$donnes['nom']."</td>
+      <td>".$donnes['prenom']."</td>
+      <td>".$donnes['adresse']."</td>
+      <td>".$donnes['telephone']."</td>
+      <td>".$donnes['email']."</td>
+      <td>".$donnes['fonction']."</td>
+      
+    </tr>
+    ";
+}
+
+
+?>
+    </table>
+    </section>
+
+    
+        
         
        
         </th>
