@@ -1,31 +1,42 @@
 <?php
+require_once 'connexion.php';
 
+$serveur = "localhost";
+$dbname = "bd_app";
+$user = "root";
+$pass = "";
 
 
 try{
-$db = new PDO('mysql:host=localhost;dbname=bd_app', 'root', '');
- 
+  
+    $db = new PDO("mysql:host=$serveur;dbname=$dbname",$user,$pass);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  
 }
-catch(Exception $e)
-{
-    echo 'Erreur : '.$e->getMessage().'<br />';
-    echo 'N° : '.$e->getCode();
-     
-}
-     
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $adresse = $_POST['adresse'];
-    $telephone = $_POST['telephone'];
-    $email = $_POST['email'];
-    $fonction = $_POST['fonction'];
+catch(PDOException $e){
    
-             
-          
-        $query = $db->prepare( 'INSERT INTO tuteurs (nom,prenom,adresse,telephone,email,fontion) VALUES (?,?,?,?,?,?)');
+}
 
-        $query->execute(array($nom,$prenom,$adresse,$telephone,$email,$fonction,));
+if(isset($_POST['inserer']))
+{
+    $nom = $_POST["nom"];
+    $prenom = $_POST["prenom"];
+    $adresse = $_POST["adresse"];
+    $telephone = $_POST["telephone"];
+    $fonction = $_POST["fonction"];
+   
 
-        header('location:tuteurs.php')
-         
+    $inserer_tuteurs = $db->prepare("INSERT INTO tuteurs(nom, prenom, adresse, telephone, fonction)
+                                        VALUES(:nom, :prenom, :adresse, :telephone, :fonction)");
+
+    $inserer_tuteurs->execute(array(
+        'nom' => $nom,
+        'prenom' => $prenom,
+        'adresse' => $adresse,
+        'telephone' => $telephone,
+        'fonction' => $fonction,
+        
+    ));
+}
+
 ?>

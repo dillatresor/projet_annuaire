@@ -32,7 +32,6 @@
             <td>prenom</td>
             <td>adresse</td>
             <td>telephone</td>
-            <td>email</td>
             <td>fonction</td>
            
           </tr>
@@ -47,7 +46,6 @@
       <td>".$donnes['prenom']."</td>
       <td>".$donnes['adresse']."</td>
       <td>".$donnes['telephone']."</td>
-      <td>".$donnes['email']."</td>
       <td>".$donnes['fonction']."</td>
       
     </tr>

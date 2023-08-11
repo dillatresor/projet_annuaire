@@ -32,10 +32,7 @@
             <label for="formGroupExampleInput" class="form-label"></label>
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="telephone">
         </div>
-        <div class="mb-6">
-            <label for="formGroupExampleInput" class="form-label"></label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="email">
-        </div>
+       
         <div class="mb-6">
             <label for="formGroupExampleInput" class="form-label"></label>
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="fonction">
@@ -46,7 +43,7 @@
    
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <input id="sendapprenants" type="submit" value="Ajouter" name="ajouter"
+            <input id="sendapprenants" type="submit" value="inserer" name="inserer"
                 class="btn btn-danger sbouton2 col-2">
             <input id="annuler" type="" value="Annuler" name="annuler" class="btn btn-danger sbouton2 col-2">
         </div>
