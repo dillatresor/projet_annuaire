@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Annuaire</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-</head>
-<body>
-<?php include 'menu.php';?>
+<html lang="fr">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport"
+                        content="width=device-width, initial-scale=1.0">
+                <title>Annuaire des Apprennants</title>
+                <link rel="stylesheet" href="css/bootstrap.min.css">
+                
+
+        </head>
+        <body>
+        <?php include 'menu.php';?>
                <div class="text-center" style="font-family: Algerian">
                         <h2>BIENVENUE DANS L'ANNUAIRE DES APPRENANTS</h2>
               </div>      
@@ -18,11 +21,15 @@
              </div>   
 
               <?php include 'footer.php'; ?>
-              <script type="text/javascript" src="js/navigateur.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/details.js"></script>
-    <script type="text/javascript"> 
-   </script>
-            
-</body>
+  
+                <script src="style/js/bootstrap.bundle.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/bootstrap.esm.js"></script>
+        <script src="js/bootstrap.esm.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+          
+        
+        
+        </body>
 </html>
